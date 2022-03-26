@@ -31,11 +31,7 @@ export default function createTask() {
     let test4 = prompt("priority");
     const testTask = task(test,test2,test3,test4) ;
     
-    console.log(testTask)
-    console.log(testTask.titleOfTask)
-    console.log(testTask.descriptionOfTask)
-    console.log(testTask.dateOfTask)
-    console.log(testTask.priorityOfTask)
+    console.log(testTask) 
     
     return testTask
  }
