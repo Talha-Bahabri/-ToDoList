@@ -9,7 +9,7 @@
     border-radius: 10px;
 }
 
-.tool-div {
+#projectsDiv {
     display: flex;
     flex-direction: column;
     align-content: space-between;
