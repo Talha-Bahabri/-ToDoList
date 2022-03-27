@@ -1,16 +1,14 @@
 
-const project= (task) => {
+const project = () => {
     
-    let titleOfTask = title(titlePut);
-    // let descriptionOfTask = description(descriptionPut)
-    // let dateOfTask = date(datePut)
-    // let priorityOfTask = priority(priorityPut)
-
-    // return { titleOfTask, descriptionOfTask, dateOfTask, priorityOfTask}
+    let tasksOfProject = []; 
+    const addTaskToProject = (task) => tasksOfProject.push(task);
+    const getTask = (location) => console.log(`${}`)
+    return { tasksOfProject, addTaskToProject};
 }
 
-export default function createProject(task) { 
-    const newProject = task ;
+export default function createProject() { 
+    const newProject = project() ;
      
     return newProject
  }

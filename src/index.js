@@ -28,11 +28,13 @@ projectsDiv.appendChild(defaultProject())
 //   } 
 
 let ggProject
+
   const addProjectBtn = document.querySelector('.addProjectBtn')
   addProjectBtn.addEventListener('click' , function(e) {
     
       console.log(`add is clicked`)
-      ggProject = createProject(ggTask)
+      ggProject = createProject()
+      ggProject.addTaskToProject(ggTask)
       console.log(`here is the ggProject =`)
       console.log(ggProject)
 
