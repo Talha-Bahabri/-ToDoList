@@ -20,13 +20,13 @@ function overlayON() {
     document.querySelector(".overlay").style.display = "block";
   }
 
-  function overlayOFF() { 
+//   function overlayOFF() { 
  
-    document.querySelector(".overlay").style.display = "none";
-  } 
+//     document.querySelector(".overlay").style.display = "none";
+//   } 
 
-  const addProjectBtn = document.querySelector('.addProjectBtn')
-  addProjectBtn.addEventListener('click' , function(e) {
-    overlayON()
-      console.log(`add is clicked`)
-  })
+//   const addProjectBtn = document.querySelector('.addProjectBtn')
+//   addProjectBtn.addEventListener('click' , function(e) {
+//     overlayON()
+//       console.log(`add is clicked`)
+//   })
