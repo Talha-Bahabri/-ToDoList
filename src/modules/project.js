@@ -1,21 +1,17 @@
-const project= (task) => {
+// const project= (task) => {
     
-    let titleOfTask = title(titlePut);
-    // let descriptionOfTask = description(descriptionPut)
-    // let dateOfTask = date(datePut)
-    // let priorityOfTask = priority(priorityPut)
+//     let titleOfTask = title(titlePut);
+//     // let descriptionOfTask = description(descriptionPut)
+//     // let dateOfTask = date(datePut)
+//     // let priorityOfTask = priority(priorityPut)
 
-    // return { titleOfTask, descriptionOfTask, dateOfTask, priorityOfTask}
-}
+//     // return { titleOfTask, descriptionOfTask, dateOfTask, priorityOfTask}
+// }
 
-export default function createProject() {
-    let test = prompt("title");
-    let test2 = prompt("desc");
-    let test3 = prompt("date");
-    let test4 = prompt("priority");
-    const testTask = task(test,test2,test3,test4) ;
+export default function createProject(task) { 
+    const testProject = task ;
     
-    console.log(testTask) 
+    console.log(testProject) 
     
-    return testTask
+    return testProject
  }
