@@ -3,7 +3,7 @@ const project = () => {
     
     let tasksOfProject = []; 
     const addTaskToProject = (task) => tasksOfProject.push(task);
-    const getTask = (location) => console.log(`${}`)
+    // const getTask = (location) => console.log(`${}`)
     return { tasksOfProject, addTaskToProject};
 }
 
