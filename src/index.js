@@ -27,20 +27,19 @@ projectsDiv.appendChild(defaultProject())
 //     document.querySelector(".overlay").style.display = "none";
 //   } 
 
-let projectsArray = [];
-
-  const addProjectBtn = document.querySelector('.addProjectBtn')
-  addProjectBtn.addEventListener('click' , function(e) {
-
-      let projectName = prompt("project name");
-      projectsArray.push(createProject())
-      console.log(`add is clicked`)
-    //   ggProject = createProject()
-    //   ggProject.addTaskToProject(ggTask)
-      console.log(`here is the ggProject =`)
-      console.log(`${projectsArray[0]}`)
-    //   console.log(ggProject)
 
 
+// let projectsArray = [];
 
-  })
+//   const addProjectBtn = document.querySelector('.addProjectBtn')
+//   addProjectBtn.addEventListener('click' , function(e) {
+
+//       let projectName = prompt("project name");
+//       projectsArray.push(createProject())
+//       console.log(`add is clicked`)
+//     //   ggProject = createProject()
+//     //   ggProject.addTaskToProject(ggTask)
+//       console.log(`here is the ggProject =`)
+//       console.log(`${projectsArray[0]}`)
+//     //   console.log(ggProject)
+//   })
