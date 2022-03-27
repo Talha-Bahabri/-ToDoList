@@ -27,10 +27,13 @@ projectsDiv.appendChild(defaultProject())
 //     document.querySelector(".overlay").style.display = "none";
 //   } 
 
+let ggProject
   const addProjectBtn = document.querySelector('.addProjectBtn')
   addProjectBtn.addEventListener('click' , function(e) {
     
       console.log(`add is clicked`)
-      createProject(ggTask)
+      ggProject = createProject(ggTask)
+      console.log(`here is the ggProject =`)
+      console.log(ggProject)
 
   })
