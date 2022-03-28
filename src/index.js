@@ -3,13 +3,19 @@ import createTask from './modules/task';
 import defaultProject from './modules/defaultAddedProjects'
 import createProject from './modules/project'
     
-    let ggTask
+    
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
-    ggTask=createTask();
-    console.log(`the   btn clicked`)
+    let newTask=createTask();
+    console.log(newTask)
+    printTaskInBox(newTask);
  
 })
+
+function printTaskInBox(task) {
+    const tasksDiv = document.getElementById('tasks-div')
+    tasksDiv.appendChild(task)
+}
 
 const projectsDiv = document.getElementById('projectsDiv')
 projectsDiv.appendChild(defaultProject())  

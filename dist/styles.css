@@ -28,7 +28,7 @@
     font-size: 50px;
 }
 
-.sketch-div {
+#tasks-div {
     display: grid;
     grid-template-columns: repeat(4, auto); 
     border-style: dashed;
