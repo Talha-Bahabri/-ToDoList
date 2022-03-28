@@ -7,13 +7,18 @@ import createProject from './modules/project'
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
     let newTask=createTask();
-    console.log(newTask)
-    printTaskInBox(newTask);
+    const newTaskP = document.createElement('p')
+    newTaskP.textContent = `${JSON.stringify(newTask.titleOfTask)}`
+    newTaskP.classList.add('taskStyle')
+    
+    console.log(newTask.titleOfTask)
+    printTaskInBox(newTaskP);
  
 })
 
 function printTaskInBox(task) {
     const tasksDiv = document.getElementById('tasks-div')
+    
     tasksDiv.appendChild(task)
 }
 

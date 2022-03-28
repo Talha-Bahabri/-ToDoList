@@ -29,13 +29,19 @@
 }
 
 #tasks-div {
-    display: grid;
-    grid-template-columns: repeat(4, auto); 
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: repeat(4, auto);  */
     border-style: dashed;
     border-radius: 10px;
     width: 2500px; 
     max-height: 545px;
     margin: 20px;
+    padding: 10px
+}
+
+.taskStyle {
+    font-size: 25px;
 }
 
 .footer {
