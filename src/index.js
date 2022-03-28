@@ -3,10 +3,12 @@ import createTask from './modules/task';
 import defaultProject from './modules/defaultAddedProjects'
 import createProject from './modules/project'
     
+var tasksArray = []
     
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
     let newTask=createTask();
+    
     const newTaskP = document.createElement('p')
     newTaskP.textContent = `${JSON.stringify(newTask.titleOfTask)}`
     newTaskP.classList.add('taskStyle')
