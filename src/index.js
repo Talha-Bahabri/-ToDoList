@@ -8,13 +8,18 @@ var tasksArray = []
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
     let newTask=createTask();
-    
+    tasksArray.push(newTask)
+
+
+
     const newTaskP = document.createElement('p')
     newTaskP.textContent = `${JSON.stringify(newTask.titleOfTask)}`
     newTaskP.classList.add('taskStyle')
-    
-    console.log(newTask.titleOfTask)
+     
     printTaskInBox(newTaskP);
+    let lastElmntInArray = tasksArray.slice(-1) ;
+    console.log(`this is the last element of the array which is ${JSON.stringify(lastElmntInArray)}`)
+    console.log(`all array elemnts ${tasksArray}`)
  
 })
 
