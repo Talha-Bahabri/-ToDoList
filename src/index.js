@@ -9,8 +9,7 @@ import createProject from './modules/project'
     
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
-    let newTask=createTask();
-    // tasksArray.push(newTask)
+    let newTask=createTask(); 
     console.log(`project name: ${project1.projectName} .`); 
     console.log(`project1 Array before adding is : ${project1.tasksOfProject}`)
     project1.addTaskToProject(newTask)
@@ -20,12 +19,7 @@ taskBtn.addEventListener("click" , function(e) {
     newTaskP.textContent = `${JSON.stringify(newTask.titleOfTask)}`
     newTaskP.classList.add('taskStyle')
      
-    printTaskInBox(newTaskP);
-    // let lastElmntInArray = tasksArray.slice(-1) ;
-
-    // console.log(`this is the last element of the array which is ${JSON.stringify(lastElmntInArray)}`)
-    // console.log(`all array elemnts ${tasksArray}`)
- 
+    printTaskInBox(newTaskP); 
 })
 
 function printTaskInBox(task) {
@@ -38,31 +32,7 @@ const projectsDiv = document.getElementById('projectsDiv')
 projectsDiv.appendChild(defaultProject())  
 // projectsDiv.appendChild(defaultProject())  
  
-
-
-// function overlayON() {
-//     console.log(`###############overlay is on `)
-//     document.querySelector(".overlay").style.display = "block";
-//   }
-
-//   function overlayOFF() { 
- 
-//     document.querySelector(".overlay").style.display = "none";
-//   } 
-
-
-
-// let projectsArray = [];
-
-//   const addProjectBtn = document.querySelector('.addProjectBtn')
-//   addProjectBtn.addEventListener('click' , function(e) {
-
-//       let projectName = prompt("project name");
-//       projectsArray.push(createProject())
-//       console.log(`add is clicked`)
-//     //   ggProject = createProject()
-//     //   ggProject.addTaskToProject(ggTask)
-//       console.log(`here is the ggProject =`)
-//       console.log(`${projectsArray[0]}`)
-//     //   console.log(ggProject)
-//   })
+const addProjectBtn = document.getElementById('addProjectBtn');
+addProjectBtn.addEventListener("click" , function(e) {
+    
+})
