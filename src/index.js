@@ -5,7 +5,8 @@ import createProject from './modules/project'
     
 // var tasksArray = []
     var project1 = createProject("nameIsgiven") ; 
-
+    var selectedProject = project1;
+    
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
     let newTask=createTask();
