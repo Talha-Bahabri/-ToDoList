@@ -3,23 +3,27 @@ import createTask from './modules/task';
 import defaultProject from './modules/defaultAddedProjects'
 import createProject from './modules/project'
     
-var tasksArray = []
-    
+// var tasksArray = []
+    var project1 = createProject("nameIsgiven") ; 
+
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
     let newTask=createTask();
-    tasksArray.push(newTask)
-
-
+    // tasksArray.push(newTask)
+    console.log(`project name: ${project1.projectName} .`); 
+    console.log(`project1 Array before adding is : ${project1.tasksOfProject}`)
+    project1.addTaskToProject(newTask)
+     console.log(`project1 Array AFTER adding is : ${JSON.stringify(project1.tasksOfProject)}`)
 
     const newTaskP = document.createElement('p')
     newTaskP.textContent = `${JSON.stringify(newTask.titleOfTask)}`
     newTaskP.classList.add('taskStyle')
      
     printTaskInBox(newTaskP);
-    let lastElmntInArray = tasksArray.slice(-1) ;
-    console.log(`this is the last element of the array which is ${JSON.stringify(lastElmntInArray)}`)
-    console.log(`all array elemnts ${tasksArray}`)
+    // let lastElmntInArray = tasksArray.slice(-1) ;
+
+    // console.log(`this is the last element of the array which is ${JSON.stringify(lastElmntInArray)}`)
+    // console.log(`all array elemnts ${tasksArray}`)
  
 })
 
