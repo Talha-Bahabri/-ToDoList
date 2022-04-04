@@ -3,7 +3,6 @@ import createTask from './modules/task';
 import defaultProject from './modules/defaultAddedProjects'
 import createProject from './modules/project'
     
-// var tasksArray = []
     var project1 = createProject("nameIsgiven") ; 
     var selectedProject = project1;
     
@@ -20,6 +19,7 @@ taskBtn.addEventListener("click" , function(e) {
     newTaskP.classList.add('taskStyle')
      
     printTaskInBox(newTaskP); 
+    
 })
 
 
@@ -36,9 +36,10 @@ addProjectBtn.addEventListener("click" , function(e) {
         
         const newProjectP = document.createElement('p')
         newProjectP.textContent = `${JSON.stringify(projectNameInput)}`
-        newProjectP.classList.add('taskStyle')
-
+        newProjectP.classList.add('project') 
         printProjectInBox(newProjectP)
+
+
 
 })
 
@@ -53,3 +54,15 @@ function printProjectInBox(project) {
     
     projectsDiv.appendChild(project)
 }
+
+
+const projectPara = document.querySelector(".project")
+projectPara.addEventListener("click" , function (e) {
+    console.log(`a project is pressed ,,, `)
+
+})
+
+// function onClickProject() {
+//     const projectToPress = document.querySelector(".project")
+//     console.log(`a project is pressed ,,, `)
+// }
