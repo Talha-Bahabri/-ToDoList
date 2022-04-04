@@ -22,11 +22,7 @@ taskBtn.addEventListener("click" , function(e) {
     printTaskInBox(newTaskP); 
 })
 
-function printTaskInBox(task) {
-    const tasksDiv = document.getElementById('tasks-div')
-    
-    tasksDiv.appendChild(task)
-}
+
 
 const projectsDiv = document.getElementById('projectsDiv')
 projectsDiv.appendChild(defaultProject())  
@@ -34,5 +30,26 @@ projectsDiv.appendChild(defaultProject())
  
 const addProjectBtn = document.getElementById('addProjectBtn');
 addProjectBtn.addEventListener("click" , function(e) {
-    
+
+        let projectNameInput = prompt("project name ?")
+        console.log(`adProject ispressed and it's name  `)
+        
+        const newProjectP = document.createElement('p')
+        newProjectP.textContent = `${JSON.stringify(projectNameInput)}`
+        newProjectP.classList.add('taskStyle')
+
+        printProjectInBox(newProjectP)
+
 })
+
+function printTaskInBox(task) {
+    const tasksDiv = document.getElementById('tasks-div')
+    
+    tasksDiv.appendChild(task)
+}
+
+function printProjectInBox(project) {
+    const projectsDiv = document.getElementById('projectsDiv')
+    
+    projectsDiv.appendChild(project)
+}
