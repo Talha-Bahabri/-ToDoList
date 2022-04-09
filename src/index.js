@@ -9,7 +9,7 @@ import createProject from './modules/project'
 const taskBtn = document.getElementById('createTaskButton');
 taskBtn.addEventListener("click" , function(e) {
     let newTask=createTask(); 
-    console.log(`project name: ${project1.projectName} .`); 
+    console.log(`project name: ${JSON.stringify(selectedProject.projectName)} .`); 
     console.log(`project1 Array before adding is : ${project1.tasksOfProject}`)
     project1.addTaskToProject(newTask)
      console.log(`project1 Array AFTER adding is : ${JSON.stringify(project1.tasksOfProject)}`)
@@ -32,13 +32,17 @@ const addProjectBtn = document.getElementById('addProjectBtn');
 addProjectBtn.addEventListener("click" , function(e) {
 
         let projectNameInput = prompt("project name ?")
-        console.log(`adProject ispressed and it's name  `)
+        let projectToBeCreated = createProject(projectNameInput);
+
+        console.log(`adProject ispressed and it's name  ${projectToBeCreated}`)
         
         const newProjectP = document.createElement('p')
-        newProjectP.textContent = `${JSON.stringify(projectNameInput)}`
+        newProjectP.textContent = `${JSON.stringify(projectToBeCreated)}`
         newProjectP.classList.add('project') 
-        printProjectInBox(newProjectP)
+        printProjectInBox(newProjectP) 
 
+        //the selecter here to select the newly created project
+        selectedProject = projectToBeCreated;
 
 
 })
